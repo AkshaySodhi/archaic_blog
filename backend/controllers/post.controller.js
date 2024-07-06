@@ -56,6 +56,7 @@ export const addPost = async (req, res) => {
 export const deletePost = async (req, res) => {
   try {
     const { title } = req.params;
+    //console.log(title);
     await Post.findOneAndDelete({ title });
     res.status(200).json({
       status: "success",
